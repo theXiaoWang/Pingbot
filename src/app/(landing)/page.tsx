@@ -55,17 +55,35 @@ const Page = () => {
           <MaxWidthWrapper className="relative">
             <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
               <MockDiscordUI>
-                {/* <AnimatedList>{...["a", "b", "cs"].reverse()}</AnimatedList> */}
-                <DiscordMessage
-                  avatarSrc="/brand-asset-profile-picture.png"
-                  avatarAlt="Pingbot Avatar"
-                  username="PingBot"
-                  timestamp="Today at 01:47AM"
-                  badgeText="SignUp"
-                  badgeColor="#53b581"
-                  title="👍 Someone likes the message"
-                  content={{ name: "Luke Skywalker}" }}
-                />
+                <AnimatedList>
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.png"
+                    avatarAlt="Pingbot Avatar"
+                    username="PingBot"
+                    timestamp="Today at 01:47AM"
+                    badgeText="SignUp"
+                    badgeColor="#43b581"
+                    title={`👤 New user signed up.`}
+                    content={{
+                      name: "Luke Skywalker",
+                      email: "starwars@gmail.com",
+                    }}
+                  />
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.png"
+                    avatarAlt="Pingbot Avatar"
+                    username="PingBot"
+                    timestamp="Today at 12:23AM"
+                    badgeText="Payment"
+                    badgeColor="#faa61a"
+                    title={`💰 A new payment received.`}
+                    content={{
+                      amount: "$49.99",
+                      email: "takemymoney@gmail.com",
+                      plan:"PRO"
+                    }}
+                  />
+                </AnimatedList>
               </MockDiscordUI>
             </div>
           </MaxWidthWrapper>

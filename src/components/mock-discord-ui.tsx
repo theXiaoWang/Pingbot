@@ -24,26 +24,9 @@ import {
 import { DiscordIcons } from "@/components/discord-ui/icons"
 import Image from "next/image"
 
-const TempSVGGetter = () => {
-  useEffect(() => {
-    const getSVG = async () => {
-      const response = await fetch(
-        "https://svg-collections.pages.dev/discord/communication.svg"
-      )
-      const text = await response.text()
-      console.log("SVG content:", text)
-    }
-
-    getSVG()
-  }, [])
-
-  return null
-}
-
 export const MockDiscordUI = ({ children }: PropsWithChildren) => {
   return (
     <div className="flex min-h-[800px] w-full max-w-[1200px] bg-discord-bg text-white rounded-lg overflow-hidden shadow-xl">
-      <TempSVGGetter />
       {/* server list */}
       <div className="hidden sm:flex w-[72px] bg-[#1e1f22] py-3 flex-col items-center">
         <div className="size-12 bg-discord-brand-color flex rounded-2xl items-center justify-center mb-2 hover:rounded-xl transition-all duration-200">
@@ -195,6 +178,7 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
         <div className="flex-1 flex flex-col-reverse bg-discord-bg p-4 overflow-y-auto max-h-[680px]">
           {children}
         </div>
+
         {/* message input */}
         <div className="px-3 py-4">
           <div className="flex items-center bg-[#40444b] rounded-lg p-1">
