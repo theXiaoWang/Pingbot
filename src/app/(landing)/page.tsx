@@ -60,10 +60,10 @@ const Page = () => {
                     avatarSrc="/brand-asset-profile-picture.png"
                     avatarAlt="Pingbot Avatar"
                     username="PingBot"
-                    timestamp="Today at 01:47AM"
-                    badgeText="SignUp"
+                    timestamp="Today at 01:47PM"
+                    badgeText="Sign Up"
                     badgeColor="#43b581"
-                    title={`👤 New user signed up.`}
+                    title={`👤 New user signed up`}
                     content={{
                       name: "Luke Skywalker",
                       email: "starwars@gmail.com",
@@ -73,14 +73,28 @@ const Page = () => {
                     avatarSrc="/brand-asset-profile-picture.png"
                     avatarAlt="Pingbot Avatar"
                     username="PingBot"
-                    timestamp="Today at 12:23AM"
+                    timestamp="Today at 03:23 PM"
                     badgeText="Payment"
                     badgeColor="#faa61a"
-                    title={`💰 A new payment received.`}
+                    title={`💰 A new payment received`}
                     content={{
                       amount: "$49.99",
                       email: "takemymoney@gmail.com",
-                      plan:"PRO"
+                      plan: "PRO",
+                    }}
+                  />
+
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.png"
+                    avatarAlt="Pingbot Avatar"
+                    username="PingBot"
+                    timestamp="Today at 04:05PM"
+                    badgeText="Milestone"
+                    badgeColor="#5865f2"
+                    title={`🚀 Sales goal achieved`}
+                    content={{
+                      profit: "£10,000 GBP",
+                      growth: "+7.5%",
                     }}
                   />
                 </AnimatedList>
